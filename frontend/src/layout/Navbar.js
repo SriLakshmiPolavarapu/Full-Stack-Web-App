@@ -19,7 +19,7 @@ export default function Navbar() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <Link className="btn btn-outline-light"> Add User Details
+      <Link className="btn btn-outline-light" to="/adduser"> Add User Details
       </Link>
     </div>
   </nav></div>
