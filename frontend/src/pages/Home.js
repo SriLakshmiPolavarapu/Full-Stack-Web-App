@@ -25,29 +25,31 @@ export default function Home() {
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+
+    {
+      users.map((user,index)=>(
+        <tr>
+      <th scope="row" key={index}> {index+1} </th>
+      <td>{user.name}</td>
+      <td>{user.username}</td>
+      <td>{user.email}</td>
+
+      <td><button classname="btn btn-primary mx-2">View</button></td>
+        <td><button classname="btn btn-outline-primary mx-2">Edit</button></td>
+        <td><button classname="btn btn-danger-primary mx-2">Delete</button></td>
+
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+      ))
+    }
+    
+    
   </tbody>
 </table>
         </div>
