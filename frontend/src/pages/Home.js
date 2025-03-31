@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 
@@ -41,9 +42,9 @@ export default function Home() {
       <td>{user.username}</td>
       <td>{user.email}</td>
 
-      <td><button classname="btn btn-primary mx-2">View</button></td>
-        <td><button classname="btn btn-outline-primary mx-2">Edit</button></td>
-        <td><button classname="btn btn-danger-primary mx-2">Delete</button></td>
+      <td><Link classname="btn btn-primary mx-2">View</Link></td>
+        <td><Link classname="btn btn-outline-primary mx-2" to={`/edituser/${user.id}`}>Edit</Link></td>
+        <td><Link classname="btn btn-danger-primary mx-2">Delete</Link></td>
 
     </tr>
       ))
