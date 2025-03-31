@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default function Home() {
 
-    const [users, setUsers] = useState([])
+    const [users, setUsers] = useState([]);
     useEffect(() =>{
         loadUsers();
     }, []);
